@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primaryColor: blue;
+            --psize:20px
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .parent {
+            /* margin-top: 200px; */
+            /* position: relative; */
+
+        }
+
+        .box {
+            height: 100px;
+            border: 2px solid black;
+        }
+
+        /* .box1{
+            background-color: aqua;
+        } */
+        .box:first-child {
+            background-color: aqua;
+            position: relative;
+            z-index: 1;
+            /* right: 1px; */
+            left: calc(100% - 100px);
+            /* left: 100%; */
+
+            width: 100px;
+        }
+
+        .box:last-child {
+            background-color: var(--primaryColor);
+        }
+
+        .box:nth-child(5) {
+            --primaryColor:brown;
+            font-size: var(--psize);
+            background-color: var(--primaryColor);
+            color: white;
+        }
+
+        .box:nth-child(3) {
+            background-color: blueviolet;
+            /* position: relative; */
+            position: absolute;
+             background-color: var(--primaryColor);
+            /* z-index: 2; */
+
+            /* position: fixed; */
+
+            /* position: sticky; */
+            top: 50px;
+            width: 100%;
+
+            /* left: 30px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height: 50px; background-color: burlywood;">
+        box 123
+    </div>
+    <!-- <div class="parent">
+        <div class="box box1">Box1</div>
+        <div class="box box2" style="background-color: cadetblue;">Box2</div>
+        <div class="box box3">Box3</div>
+        <div class="box" style="background-color: chocolate;">Box4</div>
+        <div class="box">Box5</div>
+        <div class="box">Box6</div>
+        <div class="box">Box7</div>
+        <div class="box">Box8</div>
+        <div class="box">Box9</div>
+        <div class="box">Box10</div>
+
+    </div>
+    <div
+        style="background-color: chartreuse; height: 100px;width: 100px; position: absolute;top: 50%; left: 50%; transform: translate(-50%,-50%);">
+        center box
+    </div>
+    <div style="background-color: coral; transform: translateY(-100px);">
+        boxxxxxxx
+    </div> -->
+    
+
+</body>
+
+</html>
