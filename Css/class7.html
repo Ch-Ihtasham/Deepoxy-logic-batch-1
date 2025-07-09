@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* div {
+            background-color: aqua;
+            height: 100vh;
+            font-size: 20px;
+        } */
+
+
+
+        /* @media (max-width:769px) {
+            div {
+                background-color: yellow;
+            }
+        } */
+
+        /* @media (max-width:426px) {
+            div {
+                background-color: blue;
+                color: white;
+                font-size: 16px;
+            }
+        } */
+        /* @media (min-width:425px) {
+            div{
+                background-color: brown;
+            }
+        } */
+        /* @media screen and (max-width:425px) {
+            div {
+                background-color: blue;
+                color: white;
+                font-size: 16px;
+            }
+        } */
+
+        /* @media (min-width:600px)and (max-width:700px) {
+            div{
+                background-color: black;
+            }
+        } */
+        /* img{
+            float: left;
+            
+         }
+         .parent::after{
+            content: "";
+            clear: both;
+         }
+         .abc::selection{
+            background-color: aqua;
+         }
+         input::placeholder{
+            background-color: brown;
+            color: blue;
+         } */
+        .parent {
+            background-color: blueviolet;
+            display: flex;
+            flex-wrap: wrap;
+            /* row-gap: 10px;
+            column-gap: 20px; */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            /* justify-content: flex-end; */
+            height: 100vh;
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-content: center; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+
+        }
+
+        .box {
+            background-color: aqua;
+            border: 1px solid black;
+            height: 50px;
+            width: 150px;
+        }
+
+        ul li {
+            /* flex-grow: 1; */
+            width: 50px;
+        }
+
+        .pt {
+            width: 80%;
+            height: 100vh;
+            background-color: cadetblue;
+            display: grid;
+            /* grid-template-columns: 50px 50px 50px ; */
+            /* grid-template-columns: 1fr 1fr 1fr ; */
+            /* grid-template-columns: repeat(3,1fr) ; */
+            grid-template-areas: nav nav nav
+                aside main main
+                fotter fotter fotter;
+            /* align-items: center;
+            justify-items: center; */
+            /* grid-template-rows: 1fr 1fr; */
+            /* justify-content: center; */
+
+
+        }
+
+        .container {
+            height: 50px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="parent" style="border: 2px solid black;">
+        <img src="../Html/images.jpg" alt="" >
+        <div
+        style="clear: left;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, expedita, modi cupiditate possimus
+            vitae
+            perspiciatis mollitia ad excepturi porro quia quasi consequuntur maxime quo delectus laudantium? Tempore,
+            minima
+            laborum?
+        </div>
+        <div style="clear: both;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, expedita, modi cupiditate possimus
+            vitae
+            perspiciatis mollitia ad excepturi porro quia quasi consequuntur maxime quo delectus laudantium? Tempore,
+            minima
+            laborum?
+        </div>
+        <div class="abc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, expedita, modi cupiditate possimus
+            vitae
+            perspiciatis mollitia ad excepturi porro quia quasi consequuntur maxime quo delectus laudantium? Tempore,
+            minima
+            laborum?
+        </div>
+    </div>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores totam suscipit asperiores, incidunt velit cum dolorem magnam voluptatum distinctio perferendis earum nemo ullam autem itaque quibusdam ipsam debitis nam sunt.
+    </div>
+    <input type="text" placeholder="enter your name"> -->
+    <!-- <div class="parent">
+        <div class="box" style="order: 1;">Box1</div>
+        <div class="box" style="order: 2;">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+        <div class="box">Box6</div>
+        <div class="box">Box7</div>
+        <div class="box">Box8</div>
+        <div class="box">Box9</div>
+        <div class="box">Box10</div>
+
+    </div> -->
+    <!-- <nav style="display: flex; background-color: cadetblue; height: 100px;" >
+        <div style="align-self: center;">logo</div>
+        <ul style="display: flex; list-style: none; justify-content: space-around; background-color: aqua; gap: 20px; flex-grow: 1; ">
+            <li style="flex-shrink: 2; background-color: brown;">home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+        </ul>
+    </nav> -->
+    <div class="pt">
+        <div class="container">box 1</div>
+        <div class="container">box 2</div>
+        <div class="container" >box 3</div>
+        <div class="container">box 4</div>
+        <div class="container" >box 5</div>
+        <div class="container">box 6</div>
+        <div class="container">box 7</div>
+        <div class="container" style="grid-row: 1/2; grid-column: 1/4;">box 8</div>
+        <div class="container">box 9</div>
+
+    </div>
+    <div style="background-color: yellow; height: 100px; width: 100px; transform: rotate(45deg);">
+        
+
+    </div>
+
+
+</body>
+
+</html>
