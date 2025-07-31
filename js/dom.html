@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="box" id="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box"id="box1" >box 3</div>
+        <div class="box">box 4</div>
+        <div class="box">box 5</div>
+    </div>
+    <script>
+        let array = [1, 2, 3, 4]
+
+        let box = document.getElementsByClassName('box')
+        let boxes = document.querySelectorAll('.box')
+        let dabas = document.getElementById('box')
+        let daba = document.querySelector('#box1')
+        let tagname = document.getElementsByTagName('div')
+        console.log(tagname)
+        // tagname[5].style.backgroundColor = 'red'
+        // for(let a of tagname){
+        //     a.style.backgroundColor='red'
+        // }
+        console.log(array)
+        console.log(box)
+        console.log(boxes)
+        // box[0].style.backgroundColor='red'
+        // for(let a of box){
+        //     // console.log()
+        //     a.style.backgroundColor='red'
+
+        // }
+        // boxes.forEach((value) => {
+        //     value.style.backgroundColor = 'red'
+        // })
+        // array.forEach(function(e){
+        //     console.log(e)
+        // })
+        dabas.style.backgroundColor='blue'
+        daba.style.backgroundColor='yellow'
+
+    </script>
+</body>
+
+</html>
