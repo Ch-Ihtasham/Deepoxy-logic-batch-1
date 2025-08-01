@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Name" style="visibility: hidden;">ihtasham</div>
+    <!-- <div>name <span >bilal</span></div>
+    <div>name <span >hufiza</span></div>
+
+    <div>name <span id="fname"></span></div>
+
+    <input type="text" value="gull" id="nm"> -->
+    <a id="google" href="www.goggle.com">goggle</a>
+    <img src="../Html/images.jpg" alt="">
+    <button onclick="changeColor()">color add</button>
+    <div class="box" style="height: 100px;
+            width: 100px;
+            border: 1px solid black;">
+
+    </div>
+    <input type="text" name="" id="nameBox" disabled>
+    <button onclick="enable()">enable</button>
+
+    <script>
+        // let Name=document.getElementById('Name')
+        // let value=document.getElementById('nm').value
+        // console.log(value)
+        // document.getElementById('fname').innerText=value
+
+        // name.innerHTML='<i>ihtasham</i>'
+
+        // console.log(Name.innerHTML)
+        // console.log(Name.textContent)
+        // console.log('inner text',Name.innerText)
+        // console.log(document.getElementById('google').href)
+        console.log(document.getElementById('google').getAttribute('href'))
+        console.log(document.getElementById('google').src)
+        let box = document.querySelector('.box')
+        console.log(box)
+
+
+        function changeColor() {
+            box.setAttribute('class', 'color')
+        }
+        let nameBox = document.getElementById('nameBox')
+        function enable() {
+            nameBox.removeAttribute('disabled')
+        }
+
+    </script>
+</body>
+
+</html>

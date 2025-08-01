@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .abc{
+            background-color: yellow;
+        }
+
+        nav ul li {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            gap: 50px;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sideBtn,
+        .crossBtn {
+            display: none;
+        }
+
+        .sideBtn {
+            margin-left: 90%;
+        }
+
+        @media (max-width:420px) {
+
+            .sideBtn,
+            .crossBtn {
+                display: block;
+            }
+
+            nav {
+
+                position: absolute;
+                top: 0;
+                right: 0%;
+                background-color: yellow;
+                height: 100vh;
+                width: 40%;
+                /* display: flex;
+                flex-direction: column; */
+                display: none;
+            }
+
+            nav ul {
+
+                flex-direction: column;
+                
+                /* justify-content: center;
+                align-items: center; */
+
+                /* z-index: 1; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="name">my name is ihtasham</div>
+    <div>
+
+        <nav class="sidebar">
+            <div class="crossBtn">X</div>
+            <ul>
+                <li>home</li>
+                <li>home</li>
+                <li>home</li>
+                <li>home</li>
+            </ul>
+
+        </nav>
+        <div class="sideBtn">=</div>
+    </div>
+    <script>
+        let sideBtn = document.querySelector('.sideBtn')
+        let crossBtn = document.querySelector('.crossBtn')
+        let sidebar = document.querySelector('.sidebar')
+        sideBtn.addEventListener('click', () => {
+            sidebar.style.display = 'block'
+        })
+        crossBtn.addEventListener('click', () => {
+            sidebar.style.display = 'none'
+        })
+        document.getElementById('name').setAttribute('class','abc')
+    </script>
+</body>
+
+</html>
