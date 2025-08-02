@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Bar</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: bisque;
+            padding: 10px 20px;
+        }
+
+        nav ul li {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .navbar {
+
+            transition: all 0.5s cubic-bezier(0.85, 0.17, 0, 0.99);
+            flex-grow: 1;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .crossBtn {
+            display: none;
+        }
+
+        .line {
+            height: 2px;
+            width: 12px;
+            background-color: black;
+
+        }
+
+        .sideBtn {
+            display: none;
+        }
+
+        @media(max-width:420px) {
+
+            .sideBtn,
+            .crossBtn {
+                display: block;
+                cursor: pointer;
+            }
+
+            .sideBtn {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3px;
+            }
+
+            .crossBtn {
+                margin-top: 10px;
+                margin-bottom: 20px;
+                margin-left: 10px;
+                display: inline-block;
+
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 20px;
+            }
+
+            .navbar {
+                /* display: none; */
+                position: fixed;
+                transform: translateX(100%);
+                top: 0px;
+                right: 0px;
+                background-color: aquamarine;
+                height: 100vh;
+                width: 40%;
+
+            }
+        }
+
+        .stForm {
+            background-color: rgb(165, 245, 245);
+            border: 1px solid black;
+            padding: 20px;
+            width: 200px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            Logo
+        </div>
+        <nav class="navbar">
+            <div class="crossBtn">X</div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        <div class="sideBtn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="studentForm">
+
+    </div>
+    <script>
+
+        let navbar = document.querySelector('.navbar')
+        let sideBtn = document.querySelector('.sideBtn')
+        let crossBtn = document.querySelector('.crossBtn')
+        crossBtn.addEventListener('click', () => {
+            navbar.style.transform = 'translateX(100%)'
+        })
+        sideBtn.addEventListener('click', () => {
+            navbar.style.transform = 'translateX(0%)'
+        })
+        let stuData = [
+            {
+                name: 'Ihtasham',
+                class: 10,
+                rollNo: 12
+            },
+            {
+                name: 'Huzafia',
+                class: 11,
+                rollNo: 13
+            },
+            {
+                name: 'Gul',
+                class: 12,
+                rollNo: 14
+            }
+        ]
+
+
+        let studentForm = document.querySelector('.studentForm')
+        studentForm.innerHTML = stuData.map((value) => {
+            return `
+                <div class="stForm">
+                    <div><strong>Student Form</strong></div>
+                    <label for="">Name:</label>
+                    <span>${value.name}</span>
+                    <br>
+                    <label for="">Class:</label>
+                    <span>${value.class}</span>
+                    <br>
+                    <label for="">Roll No:</label>
+                    <span>${value.rollNo}</span>
+                </div>
+        `;
+        }).join("")
+
+
+
+    </script>
+
+</body>
+
+</html>
