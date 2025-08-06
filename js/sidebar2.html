@@ -111,7 +111,7 @@
         <nav class="navbar">
             <div class="crossBtn">X</div>
             <ul>
-                <li>Home</li>
+                <li hidden>Home</li>
                 <li>About</li>
                 <li>Blog</li>
                 <li>Contact Us</li>
@@ -123,6 +123,16 @@
             <div class="line"></div>
         </div>
     </div>
+    <script>
+        let line = document.getElementsByClassName('line')
+        // let line = document.querySelectorAll('.line')
+        Array.from(line).forEach(() => {
+            console.log('working')
+        })
+        console.log(document.querySelector('.sideBtn').outerHTML)
+        console.log(document.querySelector('.sideBtn').tagName)
+
+    </script>
 
     <div class="studentForm">
 

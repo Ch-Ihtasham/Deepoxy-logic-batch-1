@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            background-color: aqua;
+        }
+
+        .col {
+            background-color: blue;
+        }
+
+        .grandFather {
+            padding: 20px;
+            background-color: aqua;
+        }
+
+        .father {
+            padding: 20px;
+            background-color: rgb(6, 19, 19);
+        }
+
+        .child {
+            padding: 20px;
+            background-color: rgb(120, 129, 129);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="abc" class="col">
+        welcome to web dev
+    </div>
+
+    <div class="gul">
+
+
+    </div>
+    <button onclick="changeToggle()">toggle</button>
+    <button class="xyz">events</button>
+    <div class="grandFather">
+        <div class="father">
+            <div class="child">child</div>
+        </div>
+    </div>
+
+    <script>
+        let abc = document.getElementById('abc')
+        // abc.removeAttribute('hidden')
+        // abc.classList.add('bg')
+        // abc.classList.remove('col')
+        console.log(abc.classList.contains('col'))
+        // function changeToggle(){
+        //     abc.classList.toggle('col')
+        //     console.log(abc.classList.contains('col'))
+        // }
+        let gul = document.querySelector('.gul')
+        let div = document.createElement('div')
+        let div2 = document.createElement('div')
+        div.innerHTML = '<b>my name is gul</b>'
+        div2.innerHTML = '<b>my name is GUL</b>'
+        // gul.appendChild(div)        
+        gul.append(div, 'my father name is..', div2)
+        abc.remove()
+        // div2.remove()
+        // gul.removeChild(div2)  
+        document.querySelector('.xyz').addEventListener('dblclick', () => {
+            alert('hello world')
+        })
+
+        document.addEventListener('keydown', (e) => {
+            console.log(e.key)
+        })
+        document.querySelector('.grandFather').addEventListener('click',(e)=>{
+            e.stopPropagation()
+            alert('parent clicked')
+        })
+        document.querySelector('.child').addEventListener('click',(e)=>{
+            e.stopPropagation()
+            alert('child clicked')
+        })
+
+
+    </script>
+</body>
+
+</html>
